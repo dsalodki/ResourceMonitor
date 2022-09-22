@@ -1,0 +1,32 @@
+﻿<Window x:Class="ResourceMonitor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ResourceMonitor"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Name="TextBlockUser" Grid.Row="0" />
+        <DataGrid Name="DataGridProcesses" VerticalScrollBarVisibility="Visible" Grid.Row="1" SelectionChanged="DataGridProcesses_SelectionChanged"/>
+<Grid Grid.Row="2">
+    <Grid.RowDefinitions>
+        <RowDefinition/>
+        <RowDefinition/>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition/>
+        <ColumnDefinition/>
+    </Grid.ColumnDefinitions>
+    <TextBlock Grid.Row="0" Grid.Column="0">% Processor Time</TextBlock>
+            <TextBlock Grid.Row="0" Grid.Column="1" Name="TextBlockCPU"></TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="0">Private Bytes</TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="1" Name="TextBlockMemory"></TextBlock>
+</Grid>
+    </Grid>
+</Window>
